@@ -10,9 +10,9 @@
   ],
   "license": "MPL-2.0",
   "private": false,
-  "main": "lib/module.js",
+  "main": "dist/module.js",
   "scripts": {
-    "build": "babel module.js --out-dir lib"
+    "build": "babel src/module.js --out-dir dist"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",
