@@ -33,7 +33,6 @@ function createElement(elem, attrs) {
 
   const element = document.createElement(elem);
   addAttributes(element, attrs);
-
   return element;
 }
 
@@ -69,7 +68,28 @@ function addAttributes(elem, attrs) {
   }
 }
 
+const createAndAppendSVG = (tag, attrs, ...children) => {
+  const element = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+  addAttributes(element, attrs);
+
+  for (const child of children) {
+    const childElement = document.createElementNS('http://www.w3.org/2000/svg', child.nodeName.toLowerCase())
+
+    for (const attribute of child.attributes) {
+      childElement.setAttributeNS(null,attribute.nodeName, attribute.nodeValue);
+    }
+
+    appendChild(element, childElement);
+  }
+
+  return element;
+}
+
 export default function(tag, attrs, ...children) {
+  if (tag === "svg") {
+    return createAndAppendSVG(tag, attrs, ...children);
+  }
+
   const elem = createElement(tag, attrs);
 
   for (const child of children) {
