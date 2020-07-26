@@ -12,15 +12,17 @@
   "private": false,
   "main": "dist/module.js",
   "scripts": {
-    "build": "babel src --out-dir dist --ignore 'src/*.test.js'",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
     "test": "jest"
   },
   "devDependencies": {
-    "@babel/cli": "^7.5.5",
     "@babel/core": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
+    "@rollup/plugin-babel": "^5.1.0",
+    "@rollup/plugin-node-resolve": "^8.4.0",
     "babel-jest": "^24.9.0",
     "babel-plugin-transform-react-jsx": "^6.24.1",
-    "jest": "^24.9.0"
+    "jest": "^24.9.0",
+    "rollup": "^2.23.0"
   }
 }
