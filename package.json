@@ -12,7 +12,7 @@
   "private": false,
   "main": "dist/module.js",
   "scripts": {
-    "build": "babel src/module.js --out-dir dist",
+    "build": "babel src --out-dir dist --ignore 'src/*.test.js'",
     "test": "jest"
   },
   "devDependencies": {

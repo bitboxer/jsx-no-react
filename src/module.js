@@ -1,3 +1,5 @@
+import './polyfills';
+
 function appendChild(elem, children) {
   if (!children || children === undefined) return;
 
