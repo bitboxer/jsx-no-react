@@ -1,6 +1,6 @@
 # jsx-no-react
 
-[![CircleCI](https://circleci.com/gh/bitboxer/wishlephant.svg?style=svg&circle-token=af88ff19aedb125bc8fc2dfe165c62712fb336f8)](https://circleci.com/gh/bitboxer/wishlephant)
+[![Build Status](https://github.com/bitboxer/jsx-no-react/actions/workflows/node.js.yml/badge.svg?branch=main)](https://github.com/bitboxer/jsx-no-react/actions/workflows/node.js.yml)
 
 `jsx-no-react` makes it possible to use React's JSX syntax outside of React projects.
 
